@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+peewee = "==3.13.1"
+transitions = "==0.7.2"
+PySocks = "==1.7.1"
+pyTelegramBotAPI = "==3.6.7"
+aiogram = "*"
+aiohttp-socks = "*"
+
+[requires]
+python_version = "3.7"
