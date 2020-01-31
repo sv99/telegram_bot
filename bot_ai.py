@@ -4,7 +4,6 @@
 #
 
 import logging
-import os
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
@@ -72,10 +71,10 @@ async def process_name(message: types.Message, state: FSMContext):
         data['name'] = message.text
 
     current_state = await state.get_state()
-    logging.info('Cancelling state %r', current_state)
+    logging.info('Before process_name state %r', current_state)
     await Form.next()
     current_state = await state.get_state()
-    logging.info('Cancelling state %r', current_state)
+    logging.info('After process_name state %r', current_state)
     await message.reply("How old are you?")
 
 

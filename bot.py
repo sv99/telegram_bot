@@ -2,15 +2,16 @@
 import telebot
 from telebot import apihelper
 
+from config import API_TOKEN, PROXY_URL
+
 #
 # https://groosha.gitbook.io/telegram-bot-lessons/ - Пишем ботов для Telegram на языке Python
 #
 
 # using Tor proxy
-apihelper.proxy = {'https':'socks5://localhost:9050'}
+apihelper.proxy = {'https': PROXY_URL}
 
 # @My_ugly_ugly_bot
-API_TOKEN = '886216220:AAFuNgZdxzk9EeumP0uji8XFFgdWajLwHCU'
 bot = telebot.TeleBot(API_TOKEN)
 
 
